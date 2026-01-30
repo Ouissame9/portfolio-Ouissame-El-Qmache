@@ -2,81 +2,270 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Portfolio - Ouissame</title>
-<link rel="stylesheet" href="style.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Ouissame | Systèmes & Réseaux</title>
+<link rel="stylesheet" href="style.css"/>
 </head>
-<body>
  
-  <!-- NAVBAR -->
-<header>
-<nav>
-<h2 class="logo">Ouissame</h2>
-<ul>
-<li><a href="#home" class="active">Accueil</a></li>
-<li><a href="#about">À propos</a></li>
-<li><a href="#skills">Compétences</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-<button id="darkModeBtn">🌙</button>
+<body>
+<!-- Background FX -->
+<canvas id="fx"></canvas>
+<div class="grid-overlay"></div>
+ 
+  <!-- NAV -->
+<header class="header">
+<nav class="nav">
+<a class="brand" href="#home">
+<span class="dot"></span> OUISSAME
+</a>
+ 
+      <div class="nav-links">
+<a href="#home" class="nav-link active">Home</a>
+<a href="#about" class="nav-link">About</a>
+<a href="#skills" class="nav-link">Skills</a>
+<a href="#xp" class="nav-link">Experience</a>
+<a href="#contact" class="nav-link">Contact</a>
+<span class="nav-underline" id="underline"></span>
+</div>
+ 
+      <button class="icon-btn" id="themeBtn" aria-label="Toggle theme">◐</button>
 </nav>
 </header>
  
-  <!-- HERO SECTION -->
-<section id="home" class="hero">
-<div class="hero-text">
-<h1>Hi, <br> I'm <span>Ouissame</span></h1>
-<h2>Administration Systèmes & Réseaux (SISR)</h2>
-<p>
+  <!-- HERO -->
+<main id="home" class="hero">
+<div class="hero-left">
+<div class="badge">
+<span class="pulse"></span>
 
-        Étudiant motivé cherchant une alternance dès Septembre 2026.
-</p>
-<a href="#contact" class="btn">Me Contacter</a>
+        Candidat Alternance • SISR • Septembre 2026
 </div>
  
-    <div class="hero-img">
-<img src="assets/profile.jpg" alt="Photo Ouissame">
+      <h1 class="title">
+<span class="muted">Salut, je suis</span><br/>
+<span class="glow">Ouissame EL QMACHE</span>
+</h1>
+ 
+      <p class="subtitle">
+
+        Administration <b>Systèmes & Réseaux</b> — Linux, serveurs, scripts Python,
+
+        résolution incidents infra, et logique “cyber-ready”.
+</p>
+ 
+      <div class="cta">
+<a class="btn primary" href="#contact">Contact</a>
+<a class="btn ghost" href="#xp">Voir mon parcours</a>
 </div>
-</section>
+ 
+      <div class="quick">
+<div class="chip">Linux</div>
+<div class="chip">Serveurs</div>
+<div class="chip">Python</div>
+<div class="chip">SQL</div>
+<div class="chip">Infra</div>
+</div>
+</div>
+ 
+    <div class="hero-right">
+<div class="terminal-card">
+<div class="terminal-top">
+<span class="t-dot red"></span>
+<span class="t-dot yellow"></span>
+<span class="t-dot green"></span>
+<span class="t-title">ouissame@lab:~</span>
+</div>
+ 
+        <div class="terminal-body">
+<div class="line"><span class="prompt">$</span> whoami</div>
+<div class="out">Ouissame • SISR (BTS SIO 2026-2028)</div>
+ 
+          <div class="line"><span class="prompt">$</span> cat objective.txt</div>
+<div class="out">
+
+            Alternance SISR dès Septembre 2026 — évoluer vers Chef de Projet Réseaux / Expert SSI.
+</div>
+ 
+          <div class="line"><span class="prompt">$</span> ls skills/</div>
+<div class="out">linux  python  servers  sql  troubleshooting  web</div>
+ 
+          <div class="line"><span class="prompt">$</span> ping -c 1 linkedin</div>
+<div class="out">
+<a target="_blank" rel="noreferrer" href="https://linkedin.com/in/ouissameelq">
+
+              linkedin.com/in/ouissameelq
+</a>
+</div>
+</div>
+</div>
+</div>
+</main>
  
   <!-- ABOUT -->
 <section id="about" class="section">
-<h2>À propos</h2>
+<div class="section-head">
+<h2>About</h2>
+<p>Profil orienté infra, rigueur, autonomie et prise en main rapide.</p>
+</div>
+ 
+    <div class="cards">
+<article class="card">
+<h3>Objectif</h3>
 <p>
 
-      Étudiant en BTS SIO, spécialisé en administration systèmes et réseaux.
+          Intégrer une alternance en Administration Systèmes & Réseaux (SISR) dès Septembre 2026,
 
-      Passionné par Linux, serveurs et cybersécurité.
+          mettre en pratique Linux, Python et serveurs, et progresser vers un rôle réseau / SSI.
 </p>
+</article>
+ 
+      <article class="card">
+<h3>Education</h3>
+<ul class="list">
+<li><b>EFREI</b> — Grande école du numérique</li>
+<li><b>BTS SIO</b> 2026–2028</li>
+<li>Anglais intermédiaire • Espagnol intermédiaire</li>
+</ul>
+</article>
+ 
+      <article class="card">
+<h3>Focus</h3>
+<p>
+
+          Administration, supervision, dépannage, scripts, bonnes pratiques, documentation.
+
+          Mindset: “mesurer → diagnostiquer → corriger → prévenir”.
+</p>
+</article>
+</div>
 </section>
  
   <!-- SKILLS -->
 <section id="skills" class="section">
-<h2>Compétences</h2>
-<div class="skills-grid">
-<div>Linux</div>
-<div>Python</div>
-<div>SQL</div>
-<div>Gestion Serveurs</div>
-<div>Infra Réseau</div>
-<div>Développement Web</div>
+<div class="section-head">
+<h2>Skills</h2>
+<p>Stack orientée systèmes / réseau + scripting + web.</p>
+</div>
+ 
+    <div class="skills">
+<div class="skill">
+<div class="skill-top">
+<span>Linux</span><span class="pct" data-pct="85">0%</span>
+</div>
+<div class="bar"><span class="fill" data-fill="85"></span></div>
+</div>
+ 
+      <div class="skill">
+<div class="skill-top">
+<span>Gestion Serveurs</span><span class="pct" data-pct="78">0%</span>
+</div>
+<div class="bar"><span class="fill" data-fill="78"></span></div>
+</div>
+ 
+      <div class="skill">
+<div class="skill-top">
+<span>Python</span><span class="pct" data-pct="72">0%</span>
+</div>
+<div class="bar"><span class="fill" data-fill="72"></span></div>
+</div>
+ 
+      <div class="skill">
+<div class="skill-top">
+<span>SQL</span><span class="pct" data-pct="66">0%</span>
+</div>
+<div class="bar"><span class="fill" data-fill="66"></span></div>
+</div>
+ 
+      <div class="skill">
+<div class="skill-top">
+<span>Résolution incidents infra</span><span class="pct" data-pct="75">0%</span>
+</div>
+<div class="bar"><span class="fill" data-fill="75"></span></div>
+</div>
+ 
+      <div class="skill">
+<div class="skill-top">
+<span>Web (dev)</span><span class="pct" data-pct="68">0%</span>
+</div>
+<div class="bar"><span class="fill" data-fill="68"></span></div>
+</div>
+</div>
+</section>
+ 
+  <!-- EXPERIENCE -->
+<section id="xp" class="section">
+<div class="section-head">
+<h2>Experience</h2>
+<p>Projets / missions avec impact opérationnel.</p>
+</div>
+ 
+    <div class="timeline">
+<div class="t-item">
+<div class="t-date">Jan 2024 → Juin 2024</div>
+<div class="t-card">
+<h3>Freelance — Conception & vente de sites web</h3>
+<p>
+
+            Gestion complète de 3 projets: analyse besoins, réalisation, mise en ligne, relation client.
+</p>
+</div>
+</div>
+ 
+      <div class="t-item">
+<div class="t-date">2023</div>
+<div class="t-card">
+<h3>Entraîneur Football U13-U14</h3>
+<p>Leadership, organisation, pédagogie, communication.</p>
+</div>
+</div>
+ 
+      <div class="t-item">
+<div class="t-date">2022</div>
+<div class="t-card">
+<h3>Stage d’observation — Agence immobilière</h3>
+<p>Découverte environnement pro + relation client.</p>
+</div>
+</div>
 </div>
 </section>
  
   <!-- CONTACT -->
 <section id="contact" class="section">
+<div class="section-head">
 <h2>Contact</h2>
-<p>Email : <strong>o.elqmache@hotmail.com</strong></p>
-<p>Téléphone : <strong>+33 06 98 24 28 04</strong></p>
-<p>Ville : <strong>Creil</strong></p>
-<p>LinkedIn : <a href="https://linkedin.com/in/ouissameelq" target="_blank">
-
-      linkedin.com/in/ouissameelq</a>
-</p>
+<p>On peut échanger rapidement.</p>
+</div>
+ 
+    <div class="contact-grid">
+<div class="contact-card">
+<div class="k">Email</div>
+<div class="v">o.elqmache@hotmail.com</div>
+</div>
+<div class="contact-card">
+<div class="k">Téléphone</div>
+<div class="v">+33 06 98 24 28 04</div>
+</div>
+<div class="contact-card">
+<div class="k">Ville</div>
+<div class="v">Creil</div>
+</div>
+<a class="contact-card link" target="_blank" rel="noreferrer" href="https://linkedin.com/in/ouissameelq">
+<div class="k">LinkedIn</div>
+<div class="v">linkedin.com/in/ouissameelq</div>
+</a>
+</div>
+ 
+    <footer class="footer">
+<span>© <span id="year"></span> Ouissame</span>
+<span class="sep">•</span>
+<span class="mono">Build: v1.0</span>
+</footer>
 </section>
  
   <script src="script.js"></script>
 </body>
 </html>
+
+ 
 
  
